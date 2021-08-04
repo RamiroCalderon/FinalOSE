@@ -153,3 +153,23 @@ Entrypoint application = js/application-be412d64645010827f4e.js js/application-b
 Completed 200 OK in 7125ms (Views: 7121.8ms | ActiveRecord: 0.0ms | Allocations: 18501)
 
 
+Started GET "/" for ::1 at 2021-08-04 17:23:45 -0500
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 192)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 3936)
+Completed 200 OK in 19ms (Views: 17.0ms | Allocations: 5055)
+
+
+Started GET "/" for ::1 at 2021-08-04 17:25:07 -0500
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3869)
+Completed 200 OK in 15ms (Views: 13.2ms | Allocations: 4987)
+
+
