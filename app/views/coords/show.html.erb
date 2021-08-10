@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @coord.name %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @coord.school_id %>
+</p>
+
+<%= link_to 'Edit', edit_coord_path(@coord) %> |
+<%= link_to 'Back', coords_path %>

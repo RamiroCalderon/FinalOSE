@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+  </head>
+  <br />
+  <br />
+  <br />
+  <body class="text-center">
+    <form class="form-signin">
+      <img class="mb-4" src="https://oxschool.edu.mx/img/logo-oxford-school.png" alt="" width="120" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    </form>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  </br>
+
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
+
+<%# render "devise/shared/links" %>
+</body>
+
+</html>
+ 
+    
+
+<p class="mt-5 mb-3 text-muted">&copy; 2021-2022</p>

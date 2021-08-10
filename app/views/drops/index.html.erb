@@ -1,0 +1,16 @@
+<%= render "layouts/navbar" %>
+
+
+</br>
+</br>
+
+<h1>Campus </h1>   
+
+</br>
+<dd>
+<% @misds.each do |misd| %>
+  <button style="height:50px;width:200px">
+  <%= link_to misd.name, misd %>
+  </button>
+<% end %>
+</dd>
