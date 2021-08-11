@@ -8,9 +8,7 @@ class GroupsController < ApplicationController
 
   # GET /groups/1 or /groups/1.json
   def show
-    
-    @salon = Group.find(params[:id])
-      @stus = List.where(group_id:params[:id])
+   
          end
 
   # GET /groups/new

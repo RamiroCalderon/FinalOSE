@@ -2,16 +2,10 @@
 </br>
 <h1> Bienvenido <%= $maistros.name %> </h1>
 </br>
-
-
-  <% @showgs.each do |showg| %>
-    <dd>
-      <a href="/groups/<%= showg.group_id%>">
-      <button style="height:50px;width:200px">  
-      <%= showg.name%>
-      </a>
-    </dd>
-  <% end %>
-
-
-
+  <dd>
+<% $showgs.each do |showg| %>
+  <button style="height:50px;width:200px">
+  <%= link_to showg.name, showg %>
+  </button>
+<% end %>
+</dd>

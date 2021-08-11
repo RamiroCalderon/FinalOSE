@@ -7,8 +7,13 @@ class SchedulesController < ApplicationController
   end
 
   # GET /schedules/1 or /schedules/1.json
-  def show
-  end
+    def show
+    
+      @salon = Schedule.find(params[:id])
+        @stus = List.where(group_id:@salon.group_id)
+           end
+  
+  
 
   # GET /schedules/new
   def new
