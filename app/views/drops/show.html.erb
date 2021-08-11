@@ -33,7 +33,7 @@ table.d {
 </head>
 <body>
 
-<%= $yo %>
+
 
 <h1>Alumnos <%= @dro.name %>  </h1>
 <br>
@@ -49,8 +49,8 @@ table.d {
   <tbody>
   <% @stdrops.each do |stdrop| %>
     <tr>
-    <td style="text-align:left"><%= stdrop.name %> </td>
-    <td style="text-align:center"><%= stdrop.group %></td>
+    <td style="text-align:left"><%= stdrop.drop %> </td>
+    <td style="text-align:center"><%= stdrop.groups %></td>
      </tr>
  <% end %>
 </tbody>
