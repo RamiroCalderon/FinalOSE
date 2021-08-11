@@ -11,7 +11,7 @@ class DropsController < ApplicationController
   # GET /drops/1 or /drops/1.json
   def show
     @dro=Drop.find(params[:id])
-    @stdrop = List.where(drop:@dro.name,show:1)
+    @stdrops = List.where(drop:@dro.name,show:1)
     @yo = params[:id]
   end
 
