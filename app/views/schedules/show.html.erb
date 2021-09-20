@@ -1,24 +1,57 @@
 <%= render "layouts/navbar" %>
-<br>
-<br>
+
+<style>
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+} 
+
+th,td {
+  border: 1px solid black;
+}
+
+table.a {
+  table-layout: auto;
+  width: 180px;  
+}
+
+table.b {
+  table-layout: fixed;
+  width: 180px;  
+}
+
+table.c {
+  table-layout: auto;
+  width: 100%;  
+}
+
+table.d {
+  table-layout: fixed;
+  width: 100%;  
+}
+</style>
+</head>
+<body>
+
 <h1>Alumnos <%= @salon.name %>  </h1>
 <br>
-<table>
+<br>
+<table class ="d">
   <thead>
     <tr>
-      <th>Nombre</th>  
-      <th>DropOff</th>  
+      <th style="text-align:center">Nombre</th>
+      <th style="text-align:center">Grupo</th>
       </tr>
   </thead>
 
   <tbody>
-    <% @stus.each do |stu| %>
-      <tr>
-        <td><%= stu.name %></td>
-        <td><%= stu.drop %></td>
-       </tr>
-   <% end %>
-  </tbody>
+  <% @stus.each do |stu| %>
+    <tr>
+    <td style="text-align:left"><%= stu.name %> </td>
+    <td style="text-align:center"><%= stu.drop %></td>
+     </tr>
+ <% end %>
+</tbody>
 </table>
 <br>
 <br>
