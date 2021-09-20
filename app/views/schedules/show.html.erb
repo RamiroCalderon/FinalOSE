@@ -7,6 +7,7 @@
   <thead>
     <tr>
       <th>Nombre</th>  
+      <th>DropOff</th>  
       </tr>
   </thead>
 
@@ -14,6 +15,7 @@
     <% @stus.each do |stu| %>
       <tr>
         <td><%= stu.name %></td>
+        <td><%= stu.drop %></td>
        </tr>
    <% end %>
   </tbody>
