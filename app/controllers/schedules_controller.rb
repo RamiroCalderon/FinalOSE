@@ -10,7 +10,7 @@ class SchedulesController < ApplicationController
     def show
     
       @salon = Schedule.find(params[:id])
-        @stus = List.where(group_id:@salon.group_id, show:1)
+        @stus = List.where(group_id:@salon.group_id)
            end
   
   
