@@ -1,0 +1,2 @@
+class Rami < ApplicationRecord
+end

@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_09_191458) do
+ActiveRecord::Schema.define(version: 2022_01_18_191842) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "alumnos", force: :cascade do |t|
+    t.string "clafamilia"
+    t.string "NomFamilia"
+    t.string "FirstName"
+    t.string "LastName"
+    t.string "emailaddress"
+    t.string "password"
+    t.string "Rol"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "coords", force: :cascade do |t|
     t.string "name"
@@ -99,14 +111,19 @@ ActiveRecord::Schema.define(version: 2021_08_09_191458) do
     t.index ["school_id"], name: "index_students_on_school_id"
   end
 
+  create_table "temporals", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
+    t.string "encrypted_password", default: ""
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
     t.string "name"
     t.string "id_emp"
     t.string "campus"
