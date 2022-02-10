@@ -1,8 +1,6 @@
 class WelcomeController < ApplicationController
-  before_action :authenticate_user! 
-before_filter do
-redirect_to index unless current_user.admin?
-end
+  before_action :authenticate_user!
+ 
  
   def index
     @usuario=current_user
