@@ -1,38 +1,49 @@
-<%= render "layouts/navbar" %>
+<%= render "layouts/navbar2" %>
 
 <style>
-table {
+
+body
+{
+  padding-top: 70px;
+}
+
+table 
+{
   border-collapse: collapse;
   border: 1px solid black;
 } 
 
-th,td {
+th,td 
+{
   border: 1px solid black;
 }
 
-table.a {
+table.a 
+{
   table-layout: auto;
   width: 180px;  
 }
 
-table.b {
+table.b 
+{
   table-layout: fixed;
   width: 180px;  
 }
 
-table.c {
+table.c 
+{
   table-layout: auto;
   width: 100%;  
 }
 
-table.d {
+table.d 
+{
   table-layout: fixed;
   width: 100%;  
 }
 </style>
 </head>
 <body>
-
 <h1>Alumnos <%= @salon.name %>  </h1>
 <br>
 <br>

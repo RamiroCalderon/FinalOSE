@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_09_191458) do
+ActiveRecord::Schema.define(version: 2022_02_10_045044) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,16 +18,16 @@ ActiveRecord::Schema.define(version: 2021_08_09_191458) do
   create_table "coords", force: :cascade do |t|
     t.string "name"
     t.bigint "school_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
     t.index ["school_id"], name: "index_coords_on_school_id"
   end
 
   create_table "drops", force: :cascade do |t|
     t.string "name"
     t.bigint "school_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
     t.index ["school_id"], name: "index_drops_on_school_id"
   end
 
@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(version: 2021_08_09_191458) do
     t.bigint "school_id", null: false
     t.bigint "coord_id", null: false
     t.bigint "drop_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
     t.index ["coord_id"], name: "index_groups_on_coord_id"
     t.index ["drop_id"], name: "index_groups_on_drop_id"
     t.index ["school_id"], name: "index_groups_on_school_id"
@@ -57,15 +57,15 @@ ActiveRecord::Schema.define(version: 2021_08_09_191458) do
 
   create_table "roles", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
   end
 
   create_table "schedules", force: :cascade do |t|
     t.bigint "group_id", null: false
     t.bigint "staff_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
     t.string "name"
     t.index ["group_id"], name: "index_schedules_on_group_id"
     t.index ["staff_id"], name: "index_schedules_on_staff_id"
@@ -73,8 +73,8 @@ ActiveRecord::Schema.define(version: 2021_08_09_191458) do
 
   create_table "schools", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
   end
 
   create_table "staffs", force: :cascade do |t|
@@ -83,8 +83,8 @@ ActiveRecord::Schema.define(version: 2021_08_09_191458) do
     t.string "id_empl"
     t.bigint "school_id", null: false
     t.bigint "role_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
     t.index ["role_id"], name: "index_staffs_on_role_id"
     t.index ["school_id"], name: "index_staffs_on_school_id"
     t.index ["user_id"], name: "index_staffs_on_user_id"
@@ -105,12 +105,14 @@ ActiveRecord::Schema.define(version: 2021_08_09_191458) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
     t.string "name"
     t.string "id_emp"
     t.string "campus"
     t.string "rol"
+    t.string "role"
+    t.boolean "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
